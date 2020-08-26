@@ -2,9 +2,8 @@
   <div>
     <h1>Characters</h1>
     <div class="main-container">
-      <character-list>
-
-      </character-list>
+      <character-list :characters="characters"></character-list>
+      <character-detail></character-detail>
     </div>
   </div>
 </template>
