@@ -5,7 +5,12 @@
 <script>
 export default {
     name: 'list-item',
-    props: ['character']
+    props: ['character'],
+    methods: {
+        handleClick: function() {
+            eventBus.$emit('character-selected', this.character)
+        }
+    }
 }
 </script>
 
