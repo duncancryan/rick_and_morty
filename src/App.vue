@@ -3,7 +3,7 @@
     <h1>Characters</h1>
     <div class="main-container">
       <character-list :characters="characters"></character-list>
-      <character-detail></character-detail>
+      <character-detail :character="selectedCharacter"></character-detail>
     </div>
   </div>
 </template>
@@ -22,6 +22,10 @@ export default {
     fetch('https://rickandmortyapi.com/api/character')
     .then(response => response.json())
     .then(characters => this.characters = characters.results)
+
+    eventBus.$on('character-selected', (character) => {
+      this.selectedCharacter = character;
+    }))
   },
   components: {
     "character-list": CharacterList
