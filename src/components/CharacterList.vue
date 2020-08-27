@@ -12,7 +12,7 @@ import ListItem from './ListItem.vue'
 export default {
 
     name: 'character-list',
-    props: [characters],
+    props: ['characters'],
     components: {
         "list-item": ListItem
     }
