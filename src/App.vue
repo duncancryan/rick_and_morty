@@ -9,6 +9,7 @@
 </template>
 
 <script>
+import CharacterList from './components/CharacterList.vue'
 export default {
   name: 'app',
   data(){
@@ -23,7 +24,7 @@ export default {
     .then(characters => this.characters = characters.results)
   },
   components: {
-
+    "character-list": CharacterList
   }
 
 }
