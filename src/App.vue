@@ -39,5 +39,9 @@ export default {
 </script>
 
 <style>
-
+  .main-container{
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+  }
 </style>
