@@ -4,6 +4,7 @@
       <p>{{character.species}}</p>
       <p>Status: {{character.status}}</p>
       <p>Origin: {{character.origin.name}}</p>
+      <img :src="character.image" alt="Character Image">
   </div>
 </template>
 
