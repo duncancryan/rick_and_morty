@@ -9,7 +9,10 @@
 </template>
 
 <script>
-import CharacterList from './components/CharacterList.vue'
+import CharacterList from './components/CharacterList.vue';
+import CharacterDetail from './components/CharacterDetail.vue';
+import { eventBus } from './main.js';
+
 export default {
   name: 'app',
   data(){
@@ -25,10 +28,11 @@ export default {
 
     eventBus.$on('character-selected', (character) => {
       this.selectedCharacter = character;
-    }))
+    })
   },
   components: {
-    "character-list": CharacterList
+    "character-list": CharacterList,
+    "character-detail": CharacterDetail
   }
 
 }
